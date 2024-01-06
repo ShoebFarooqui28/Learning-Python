@@ -1,13 +1,7 @@
-temp = int(input("What's the temperature right now?\n"))
+temp = int(input("Enter Temperature!\n"))
 
-if temp <= 30 and temp >= 15 :
-    print("It's Moderate out there!")
-
-elif temp <= 0 and temp >= -15 :
-    print("It's Freezing out there!")
+if temp >= 0 and temp <= 30 :
+    print("It's Good Outside")
     
-elif temp > 30 : 
-    print("It's Extremly Hot out there!")
-
-else :
-    print("Its Breezy out there!")
+elif temp < 0 or temp > 30 :
+    print("It's Bad Outside")
