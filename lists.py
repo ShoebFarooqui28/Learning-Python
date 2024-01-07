@@ -1,7 +1,9 @@
 food = ["pizza", "hamburger", "hotdog", "spaghetti"]
 
-food.append("Shawarma")
-food.remove("")
+#food.append("shawarma")
+#food.remove("pizza")
+#food.pop()
+#food.insert(0, "pasta")
 
-for x in food :
+for x in food:
     print(x)
