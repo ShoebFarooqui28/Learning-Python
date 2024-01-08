@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="044971b0-9a74-478d-9380-00e2d3279236" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/dictionaries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keywordargument.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/return.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mini Projects/quiz_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course/nestedfunctioncalls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Course/nestedfunctioncalls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +62,8 @@
     "Python.keywordargument.executor": "Run",
     "Python.lists.executor": "Debug",
     "Python.logicaloperators.executor": "Run",
+    "Python.nestedfunctioncalls.executor": "Run",
+    "Python.quiz_game.executor": "Run",
     "Python.return.executor": "Run",
     "Python.sets.executor": "Run",
     "Python.tuple.executor": "Run",
@@ -76,6 +75,12 @@
     "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learning Python" />
+      <recent name="D:\Learning Python\Course" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -116,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704599375013</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1704740919064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704740919064</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
