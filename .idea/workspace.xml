@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="044971b0-9a74-478d-9380-00e2d3279236" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/Mini Projects/quiz_game.py" afterDir="false" />
+    <list default="true" id="044971b0-9a74-478d-9380-00e2d3279236" name="Changes" comment="Changes &amp; Added QuizGame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Course/nestedfunctioncalls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Course/nestedfunctioncalls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,28 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.2Dlist.executor": "Run",
-    "Python.dictionaries.executor": "Run",
-    "Python.functions.executor": "Run",
-    "Python.indexing.executor": "Run",
-    "Python.keywordargument.executor": "Run",
-    "Python.lists.executor": "Debug",
-    "Python.logicaloperators.executor": "Run",
-    "Python.nestedfunctioncalls.executor": "Run",
-    "Python.quiz_game.executor": "Run",
-    "Python.return.executor": "Run",
-    "Python.sets.executor": "Run",
-    "Python.tuple.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Learning Python",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.2Dlist.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dictionaries.executor&quot;: &quot;Run&quot;,
+    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.indexing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.keywordargument.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lists.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.logicaloperators.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nestedfunctioncalls.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quiz_game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.return.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sets.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tuple.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Learning Python&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.file-colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Learning Python" />
@@ -129,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704740919064</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes &amp; Added QuizGame">
+      <option name="closed" value="true" />
+      <created>1704745510106</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704745510106</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="Changes &amp; Added QuizGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes &amp; Added QuizGame" />
   </component>
 </project>
