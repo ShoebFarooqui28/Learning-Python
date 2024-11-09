@@ -3,6 +3,7 @@ import math
 
 pygame.init()
 
+#DISPLAY
 WIDTH = 1920
 HEIGHT = 1080
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -48,7 +49,16 @@ class Planet:
         pygame.draw.circle(win,self.color, (x,y), self.radius) 
         
         
-        
+class GravitationalForce:
+    def __init__(self, mass1, mass2, distance):
+        self.mass1 = mass1
+        self.mass2 = mass2
+        self.distance = distance
+    
+    def calculate_force(self):
+        force = (self.G * self.mass1 * self.mass2 / (self.distance * self.distance))
+    
+    
 def main():
     run = True
     clock = pygame.time.Clock()
