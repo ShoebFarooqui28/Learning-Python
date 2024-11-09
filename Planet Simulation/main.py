@@ -3,18 +3,28 @@ import math
 
 pygame.init()
 
-WIDTH = 800
-HEIGHT = 800
+WIDTH = 1920
+HEIGHT = 1080
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Planet Simulation")
-YELLOW = (255, 191, 0)
+
+#Declaring the Colors
+SunRGB = (255, 191, 0)
+MercuryRGB = (160, 160, 160)
+VenusRGB = (255, 255, 167)
+EarthRGB = (40, 122, 184)
+MarsRGB = (193, 68, 14)
+JupiterRGB = (216, 170, 130)
+SaturnRGB = (255, 204, 102)
+UranusRGB = (102, 204, 255)
+NeptuneRGB = (30, 105, 150)
 
 class Planet:
     AU = 146.6e6 * 1000
     G = 6.674228e-11
     
     #1 AU = 100 px
-    SCALE = 250 / AU   
+    SCALE = 200 / AU   
 
     # 1 Day
     TIMESTEP = 3600*24 
@@ -43,12 +53,24 @@ def main():
     run = True
     clock = pygame.time.Clock()
     
-    sun = Planet(0,0, 30, YELLOW, 1.989e30)
+    #Declaring the SUN
+    sun = Planet(0,0, 40, SunRGB, 1.989e30)
     sun.sun = True
     
-    planets = [sun]
+    #Declaring the Planets
+    mercury = Planet(0.387 * Planet.AU, 0, 8, MercuryRGB, 3.3011e23)
+    venus = Planet(0.72 * Planet.AU, 0, 14, VenusRGB, 4.8675e24)
+    earth = Planet(1 * Planet.AU, 0, 16, EarthRGB, 5.972e24)
+    mars = Planet(1.524 * Planet.AU, 0, 12, MarsRGB, 0.64171e24)
+    jupiter = Planet(2.2 * Planet.AU, 0, 24, JupiterRGB, 1.8982e27) 
+    saturn = Planet(2.582 * Planet.AU, 0, 18, SaturnRGB, 5.683e26)
+    uranus = Planet(3 * Planet.AU, 0, 17, UranusRGB, 8.681e25)
+    neptune = Planet(3.4 * Planet.AU, 0, 17, NeptuneRGB, 1.024e26)
     
-    while run:
+    
+    planets = [sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune]    
+    
+    while run:  
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
