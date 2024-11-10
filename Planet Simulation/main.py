@@ -48,6 +48,57 @@ class Planet:
         y = self.y * self.SCALE + HEIGHT / 2
         pygame.draw.circle(win,self.color, (x,y), self.radius) 
         
+    def attraction(self, otherBody):
+        #Taking in the planets x and y cords
+        otherBody_x = otherBody.x
+        otherBody_y = otherBody.y
+        
+        # Measuring the x and y distance between sun and the planet
+        distance_x = otherBody_x - self.x
+        distance_y = otherBody_y - self.y
+        
+        # Measuring the direct distance from sun to planet
+        distance =  math.sqrt((distance_x ** 2) + (distance_y ** 2))
+        
+        if otherBody.sun:
+            self.distanceToSun = distance
+        
+        # Attraction of Gravity
+        force = self.G * self.mass1 * otherBody.mass / distance ** 2 
+        
+        # Measuring the angle theta from sun to planet
+        theta = math.atan2(distance_y, distance_x)
+        
+        force_x = math.cos(theta) * force
+        
+        force_y = math.sin(theta) * force
+        
+        return force_x, force_y
+    
+    def update_position(self, planets):
+        totalForce_x = totalForce_y = 0
+        for planet in planets:
+            if self == planet:
+                continue
+            
+            fx, fy = self.attraction(planet)
+            totalForce_x =+ fx
+            totalForce_y =+ fy
+            
+            self.x_vel += totalForce_x / self.mass * self.TIMESTEP
+            self.y_vel += totalForce_y / self.mass * self.TIMESTEP
+            
+            self.x += self.x_vel * self.TIMESTEP
+            self.y += self.y_vel * self.TIMESTEP
+            
+            self.orbit.append((self.x, self.y))
+            
+            
+            
+            
+        
+        
+        
         
 class GravitationalForce:
     def __init__(self, mass1, mass2, distance):
