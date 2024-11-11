@@ -108,9 +108,6 @@ def main():
 	mars = Planet(-1.524 * Planet.AU, 0, 12, MarsRGB, 6.39 * 10**23)
 	mars.y_vel = 24.077 * 1000
 
-	
-	
-
 	planets = [sun, mercury, venus, earth, mars]
 
 	while run:
