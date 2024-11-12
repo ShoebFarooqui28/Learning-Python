@@ -8,6 +8,6 @@ z = int (z) #typecasting string to int
 
 print(x)
 print(y)
-print(z*3)
+print(z)
 
 
