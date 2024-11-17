@@ -13,7 +13,17 @@ def handleEvents():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             return False
+            break
     return True
+
+
+def createBall(space, radius, mass):
+    body = pymunk.body()
+    body.position = (WIDTH / 2, HEIGHT / 2)
+    shape = pymunk.Circle(body, 10)
+    shape.mass = mass
+    shape.color = (106, 90, 205, 255)
+
 
 
 def physicsSpace(window):
@@ -28,9 +38,9 @@ def physicsSpace(window):
 def draw(space, window, drawOptions):
     window.fill("white")
     space.debug_draw(drawOptions)
+    pygame.display.update()
     
-    
-def run(window, width, height):
+def run(window):
     run = True
     clock = pygame.time.Clock()
     fps = 60
@@ -40,14 +50,13 @@ def run(window, width, height):
     
     while run:
         run = handleEvents()
-        
         draw(space, window, drawOptions)
         space.step(dt)
         clock.tick(fps)
         
     pygame.quit()
     
-run(PANEL, 1,1)
+run(PANEL)
         
     
 
