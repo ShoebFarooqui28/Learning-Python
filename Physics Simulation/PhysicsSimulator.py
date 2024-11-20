@@ -7,7 +7,6 @@ pygame.init()
 
 WIDTH, HEIGHT = 1000, 600
 PANEL = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Physics Simulation")
 
 def handleEvents(object, space, clickCount, line):
     for event in pygame.event.get():
@@ -70,7 +69,6 @@ def createBlocks(space, width, height):
         shape.friction = 0.5
         
         space.add(body, shape)
-    
     
     
 def launchObject(object, space, clickCount, line):
@@ -147,6 +145,7 @@ def run(window, width, height):
         draw(space, window, drawOptions, line)
         space.step(dt)
         clock.tick(fps)
+        pygame.display.set_caption(f"Physics Simulation FPS : {clock.get_fps():.0f}")
 
     pygame.quit()
 
