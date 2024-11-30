@@ -13,6 +13,4 @@ class Basic(Scene):
         self.play(Create(rect))
         self.wait()
         
-        
-        
     
