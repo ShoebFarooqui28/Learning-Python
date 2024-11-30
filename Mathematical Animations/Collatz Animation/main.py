@@ -1,6 +1,8 @@
 from manim import *
 
 class Graph2D(Scene):
+    
+    
     def construct(self):
         axes = Axes(
             x_range=[0, 20, 2],
