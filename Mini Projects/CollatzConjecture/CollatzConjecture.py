@@ -25,6 +25,7 @@ def main():
     else:
         result = collatz(num)
         steps = len(result) - 1
+        print(result)
         plt.xlabel("X")
         plt.ylabel("Y")
         plt.title("Collatz Conjecture")
