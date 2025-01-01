@@ -102,7 +102,7 @@ def launchObject(object, space, clickCount, line):
     elif clickCount == 2:
         if object:
             space.remove(object, object.body)
-            object = None
+            object = None  
         clickCount = 0
 
     return object, clickCount, line
