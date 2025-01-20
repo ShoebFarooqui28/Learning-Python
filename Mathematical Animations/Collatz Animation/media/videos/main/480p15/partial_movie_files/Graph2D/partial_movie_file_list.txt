@@ -1,6 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/Shoeb Farooqui/Learning-Python/Mathematical Animations/Collatz Animation/media/videos/main/480p15/partial_movie_files/Graph2D/1185818338_3658828407_223132457.mp4'
-file 'file:C:/Users/Shoeb Farooqui/Learning-Python/Mathematical Animations/Collatz Animation/media/videos/main/480p15/partial_movie_files/Graph2D/624642324_1057694153_4016174311.mp4'
-file 'file:C:/Users/Shoeb Farooqui/Learning-Python/Mathematical Animations/Collatz Animation/media/videos/main/480p15/partial_movie_files/Graph2D/624642324_3816782454_1141748370.mp4'
-file 'file:C:/Users/Shoeb Farooqui/Learning-Python/Mathematical Animations/Collatz Animation/media/videos/main/480p15/partial_movie_files/Graph2D/624642324_511137884_1446167430.mp4'
-file 'file:C:/Users/Shoeb Farooqui/Learning-Python/Mathematical Animations/Collatz Animation/media/videos/main/480p15/partial_movie_files/Graph2D/624642324_2923979111_1520099125.mp4'
