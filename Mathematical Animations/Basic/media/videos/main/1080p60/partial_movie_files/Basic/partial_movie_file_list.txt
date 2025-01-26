@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Learning-Python/Mathematical Animations/Basic/media/videos/main/1080p60/partial_movie_files/Basic/3529212410_1124792401_223132457.mp4'
+file 'file:D:/Learning-Python/Mathematical Animations/Basic/media/videos/main/1080p60/partial_movie_files/Basic/3040924799_3275448893_4203982642.mp4'
+file 'file:D:/Learning-Python/Mathematical Animations/Basic/media/videos/main/1080p60/partial_movie_files/Basic/3040924799_827609054_4088644402.mp4'
+file 'file:D:/Learning-Python/Mathematical Animations/Basic/media/videos/main/1080p60/partial_movie_files/Basic/3040924799_1250607642_3076101310.mp4'
+file 'file:D:/Learning-Python/Mathematical Animations/Basic/media/videos/main/1080p60/partial_movie_files/Basic/3040924799_1754310298_2952137213.mp4'
