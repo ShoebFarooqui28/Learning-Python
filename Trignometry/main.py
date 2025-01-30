@@ -4,73 +4,92 @@ import sys
 
 pygame.init()
 
-WIDTH, HEIGHT = 800, 800
+# CONSTANTS
+WIDTH = 1000
+HEIGHT = 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Trignometric Functions")
+pygame.display.set_caption("Trigonometric Functions Visualization")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-BLUE = (0, 0, 255)
+BLUE = (0, 0, 255)  # Sine
+GREEN = (0, 255, 0) # Cosine
+YELLOW = (255, 255, 0) # Tangent
 
 CENTER = (WIDTH // 2, HEIGHT // 2)
-RADIUS = 200
-FONT = pygame.font.SysFont("CMU Serif Roman", 36)
+RADIUS = 150
+FONT = pygame.font.SysFont("CMU Serif", 30)
 
+# Unit Circle Function
 def drawUnitCircle(theta):
     WIN.fill(BLACK)
-    
-    # Draw the unit circle
+
+    # Unit Circle
     pygame.draw.circle(WIN, WHITE, CENTER, RADIUS, 2)
+
+    # Axis
+    pygame.draw.line(WIN, WHITE, (CENTER[0] - RADIUS - 20,CENTER[1]),(CENTER[0] + RADIUS + 20,CENTER[1]), 2)
+    pygame.draw.line(WIN, WHITE, (CENTER[0], CENTER[1] - RADIUS - 20),(CENTER[0], CENTER[1] + RADIUS + 20), 2)
+
+    # Angles
+    angles = {
+        "2π" : (CENTER[0] + RADIUS + 30,CENTER[1] - 5),
+        "π": (CENTER[0] - RADIUS - 45, CENTER[1] - 5),
+        "π/2" : (CENTER[0] - 15, CENTER[1] - RADIUS - 50),
+        "π/4" : (CENTER[0] - 15, CENTER[1] + RADIUS + 30),
+    }  
+    for text, position in angles.items():
+        text_surface = FONT.render(text, True, WHITE)
+        WIN.blit(text_surface, position)
+
+    # Trigonometric Points
+    x = CENTER[0] + RADIUS * math.cos(math.radians(theta))
+    y = CENTER[1] - RADIUS * math.sin(math.radians(theta))
     
-    # Draw the x and y axes
-    pygame.draw.line(WIN, WHITE, (CENTER[0] - RADIUS - 20, CENTER[1]), (CENTER[0] + RADIUS + 20, CENTER[1]), 2)
-    pygame.draw.line(WIN, WHITE, (CENTER[0], CENTER[1] - RADIUS - 20), (CENTER[0], CENTER[1] + RADIUS + 20), 2)
+    # Hypotenuse 
+    pygame.draw.line(WIN, YELLOW, CENTER, (x, y), 2)
     
-    text1 = FONT.render("2π", True, WHITE)
-    text_rect1 = text1.get_rect(center=(CENTER[0] + RADIUS + 40, CENTER[1]))
-    WIN.blit(text1, text_rect1)
+
+    # Sine (y) Line & Cosine (x) Line (forming the triangle)
+    pygame.draw.line(WIN, BLUE, (x, y), (CENTER[0], y), 2)  # Sine line
+    pygame.draw.line(WIN, GREEN, (x, y), (x, CENTER[1]), 2)  # Cosine line
+
+    pygame.draw.circle(WIN, BLUE, (CENTER[0], y), 5)  # Sine point
+    pygame.draw.circle(WIN, GREEN, (x, CENTER[1]), 5)  # Cosine point
+    pygame.draw.circle(WIN, YELLOW, (x,y), 5) # Tangent point
+
+    # Display 
+    angle_text = FONT.render(f"Angle: {theta}°", True, WHITE)
+    coord_text = FONT.render(f"x: {math.cos(math.radians(theta)):.2f}, y: {math.sin(math.radians(theta)):.2f}", True, WHITE)
+    WIN.blit(angle_text, (20, 20))
+    WIN.blit(coord_text, (20, 50))
     
-    text2 = FONT.render("π/2", True, WHITE)
-    text_rect2 = text2.get_rect(center=(CENTER[0], CENTER[1] - RADIUS - 40))
-    WIN.blit(text2, text_rect2)
-    
-    text3 = FONT.render("π", True, WHITE)
-    text_rect3 = text3.get_rect(center=(CENTER[0] - RADIUS - 40, CENTER[1]))
-    WIN.blit(text3, text_rect3)
-    
-    text4 = FONT.render("π3/4", True, WHITE)
-    text_rect4 = text4.get_rect(center=(CENTER[0], CENTER[1] + RADIUS + 40))
-    WIN.blit(text4, text_rect4)
-    
-    # Calculate the point on the Unit Circle
-    x = CENTER[0] + RADIUS * math.cos(math.radians(theta)) # Adjacent
-    y = CENTER[1] - RADIUS * math.sin(math.radians(theta)) # Opposite
-    
-    # Draw the point on the unit circle
-    pygame.draw.line(WIN, RED, CENTER, (x, y), 2)
-    pygame.draw.circle(WIN, BLUE, (int(x), int(y)), 5)
-    
-    
-    pygame.display.flip()
-    
+    pygame.display.update()
+
+# Main Function  
 def main():
-    theta = float(input("Enter the angle theta (in degrees): "))
-    run = True
+    theta = 45 # Start at 45 degrees
     clock = pygame.time.Clock()
-    
+    run = True
     while run:
         clock.tick(60)
-        
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
                 run = False
-        
+
+        # Control the angle with left and right arrow keys
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            theta = (theta - 2) % 360  # Decrement angle (wrap around 360)
+        if keys[pygame.K_RIGHT]:
+            theta = (theta + 2) % 360  # Increment angle (wrap around 360)
+
         drawUnitCircle(theta)
-                
-        pygame.display.update()
-    
+
     pygame.quit()
     sys.exit()
-    
+
 main()
